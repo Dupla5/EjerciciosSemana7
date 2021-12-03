@@ -1,13 +1,104 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input[type="submit"]{
+    font-size:1.2rem;
+    padding:5px;
+}
+
+/*Estilos generales*/
+#root{
+    background-color:#ccc;
+    display:grid;
+    grid-template-columns: 20% 1fr 1fr 20%;
+    grid-template-rows: 10% repeat(3,1fr);
+    grid-gap:2%;
+    grid-template-areas:
+    "header header header header"
+    "aside-l seccion seccion aside-r"
+    "aside-l seccion seccion aside-r"
+    "footer footer footer footer";
+}
+
+#header{
+    grid-area:header;
+    background-color: #000;
+    color: #fff;
+}
+
+#header #menu{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header #menu h1{
+    font-size:2rem;
+    letter-spacing: 0.6rem;
+}
+
+#header #menu div{
+    display: flex;
+}
+
+#header #menu div p{
+    margin-right: 0.5rem;
+    font-size:1.2rem;
+}
+
+#header #menu ul{
+    display:flex;
+    margin-right: 1.3rem;
+}
+
+#header #menu ul li{
+    cursor: pointer;
+    margin: 1rem;
+    transition: all 1s;
+}
+
+#header #menu ul li:hover a{
+    color: rgb(187, 214, 31);
+}
+
+#header #menu ul li a{
+    font-weight: bold;
+    font-size:1.2rem;
+}
+
+#lateral-izquierdo{
+    grid-area: aside-l;
+    background-color: blueviolet;
+}
+
+#seccion{
+    grid-area:seccion;
+    background-color:brown;
+    display: flex;
+    justify-content:center;
+}
+
+#seccion #add-post{
+    margin:2.5rem auto;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+#lateral-derecho{
+    grid-area:aside-r;
+    background-color:yellowgreen;
+}
+
+#footer{
+    grid-area:footer;
+    background-color:violet;
 }

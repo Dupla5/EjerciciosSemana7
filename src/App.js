@@ -14,9 +14,9 @@ export const App = () => {
             <aside id="lateral-izquierdo">
                 <BarraIzquierda />
             </aside>
-            <section id="seccion">
+            <main id="seccion">
                 <ContenidoPrincipal />
-            </section>
+            </main>
             <aside id="lateral-derecho">
                 <BarraDerecha />
             </aside>
